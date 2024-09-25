@@ -1,4 +1,4 @@
-import Human from "./Human";
+import Human from "./Human.js";
 
 export default class Woman extends Human{
     constructor(name, age, weight){

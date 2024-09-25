@@ -1,6 +1,6 @@
-import Human from "./Human";
-import Man from "./Man";
-import Woman from "./Woman";
+import Human from "./Human.js";
+import Man from "./Man.js";
+import Woman from "./Woman.js";
 
 const year = 2024;
 let name = "illia";
