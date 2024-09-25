@@ -1,4 +1,8 @@
-let year = 2024;
+import Human from "./Human";
+import Man from "./Man";
+import Woman from "./Woman";
+
+const year = 2024;
 let name = "illia";
 let yearOfBirth = 2005;
 
@@ -9,33 +13,12 @@ return console.log(`Я ${name}`+ (age ? `, мені ${age} років`: "") );
 
 whoami(name);
 
-class Human{
-    constructor(name, age, weight, gender){
-        this.name = name;
-        this.age = age;
-        this.weight = weight;
-        this.gender = gender;
-    }
-    getInfo(prop = null){return prop ? this[prop] : this;}
-    greeting(){}
-}
-
-class Man extends Human{
-    constructor(name, age, weight){
-        super(name, age, weight, "man")
-    }
-    greeting() {return `Привіт мене звати ${this.name}, мені ${age}`}
-}
-
-class Woman extends Human{
-    constructor(name, age, weight){
-        super(name, age, weight, "woman")
-    }
-    greeting() {return `Привіт мене звати ${this.name}`};
-}
-
+let aboba = new Human("aboba", 255, 66, "sink")
 let illia = new Man("illia", 19, 55);
+let alina = new Woman("alina",12,50)
+console.log(aboba.getInfo());
 console.log(illia.getInfo());
+console.log(alina.getInfo());
 
 let users = []
 
