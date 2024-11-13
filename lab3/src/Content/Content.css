@@ -1,0 +1,7 @@
+.Content{
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    min-height: 90vh;
+    max-height: fit-content;
+}
