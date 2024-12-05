@@ -1,0 +1,11 @@
+li{
+    margin: 1px;
+}
+ul{
+    display: flex;
+    flex-direction: inherit;
+    list-style-type: none;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
