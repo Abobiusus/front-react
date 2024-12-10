@@ -24,11 +24,11 @@ const menuSlice = createSlice({
 const dateSlice = createSlice({
     name: "date",
     initialState:{
-        value: new Date()
+        value: JSON.stringify(new Date())
     },
     reducers: {
         updateTime: (state) => {
-            state.value = new Date(); 
+            state.value = JSON.stringify(new Date()); 
         }
     }
 })

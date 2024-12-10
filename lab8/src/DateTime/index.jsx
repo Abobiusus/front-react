@@ -39,8 +39,8 @@ export default function DateTime() {
         }, 1000);
     })
     return <div>
-        <CurrentDate date={currentDate}/>
+        <CurrentDate date={new Date(JSON.parse(currentDate))}/>
         {'  '}
-        <Time time={currentDate}/>
+        <Time time={new Date(JSON.parse(currentDate))}/>
     </div>
 }
