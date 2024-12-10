@@ -1,9 +1,13 @@
 import React from "react";
 import './Footer.css';
 import Menu from "../Menu";
-import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 
-export default function Footer(props){
-    const menuList = useSelector((state) => state.menuList.links);
+function Footer({menuList}){
     return <div className="Footer">{new Menu(menuList)}</div>
 }
+const mapStateToProps = (state) => ({
+    menuList: state.menuList.links,
+})
+
+export default connect(mapStateToProps)(Footer)

@@ -10,7 +10,7 @@ function Sidebar({menuList}){
 }
 
 const mapStateToProps = (state) => ({
-    logoPath: state.menuList.links,
+    menuList: state.menuList.links,
 })
 
 export default connect(mapStateToProps)(Sidebar)

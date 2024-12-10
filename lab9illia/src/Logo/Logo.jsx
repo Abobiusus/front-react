@@ -1,10 +1,13 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 import "./logo.css"
 
-
-
-export default function Logo(){
-    const logoPath = useSelector((state)=>state.logo.value)
+function Logo({logoPath}){
     return <a href='../App.jsx'><img src={logoPath} alt=""className="logo"/></a>
 }
+
+const mapStateToProps = (state) => ({
+    logoPath: state.logo.value,
+})
+
+export default connect(mapStateToProps)(Logo)

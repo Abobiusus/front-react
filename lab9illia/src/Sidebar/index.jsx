@@ -1,11 +1,16 @@
 import React from "react";
 import './Sidebar.css'
 import Menu from "../Menu";
-import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 
-export default function Sidebar(props){
-    const menuList = useSelector((state) => state.menuList.links);
+function Sidebar({menuList}){
     return <div className="Sidebar">
         {new Menu(menuList)}
     </div>
 }
+
+const mapStateToProps = (state) => ({
+    menuList: state.menuList.links,
+})
+
+export default connect(mapStateToProps)(Sidebar)
