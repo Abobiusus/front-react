@@ -1,0 +1,10 @@
+ul{
+    display: flex;
+    flex-direction: column;
+}
+.catFacts{
+    background: #2c2c2c;
+    color: #fff;
+    border-radius: 4px;
+    width: fit-content;
+}

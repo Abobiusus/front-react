@@ -1,9 +1,11 @@
 import React from "react";
-import './Footer.css';
+import './Sidebar.css'
 import Menu from "../Menu";
 import { useSelector } from 'react-redux';
 
-export default function Footer(props){
+export default function Sidebar(props){
     const menuList = useSelector((state) => state.menuList.links);
-    return <div className="Footer">{new Menu(menuList)}</div>
+    return <div className="Sidebar">
+        {new Menu(menuList)}
+    </div>
 }

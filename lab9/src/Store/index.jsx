@@ -14,7 +14,7 @@ const menuSlice = createSlice({
         links: [
             { text: "youtube", url: "https://www.youtube.com/" },
             { text: "main", url: "http://localhost:3000/" },
-            { text: "aboba", url: "" },
+            { text: "aboba", url: "" }, // Можна залишити порожній URL
         ]
     },
     reducers: {}

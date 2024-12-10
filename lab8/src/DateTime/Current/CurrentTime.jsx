@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"; // Імпортуємо useEffect
+import React from "react";
 
 export default function CurrentTime({ time }) {
+    const formattedTime = time.toLocaleTimeString("uk-UA");
 
-    const formattedTime = new Date(time).toLocaleTimeString("uk-UA");
     return <>{formattedTime}</>;
 }

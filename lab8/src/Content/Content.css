@@ -1,6 +1,14 @@
 .Content{
     flex: 1;
     padding: 20px;
-    background-color: #fff;
     max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    max-height: fit-content;
+}
+.helperZone{
+    width: fit-content;
 }

@@ -3,16 +3,10 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #2c2c2c;
-  color: #fff;
 }
 
 
 .body_structure{
   display: flex;
   flex: 1;
-  text-decoration: none;
-}
-a{
-  color:  inherit;
 }

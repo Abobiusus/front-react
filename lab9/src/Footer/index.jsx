@@ -1,7 +1,7 @@
 import React from "react";
 import './Footer.css';
-import Menu from "../Menu";
 import { useSelector } from 'react-redux';
+import Menu from "../Menu";
 
 export default function Footer(props){
     const menuList = useSelector((state) => state.menuList.links);

@@ -1,7 +1,6 @@
 import React from "react";
 import './Content.css'
 import helper from '../helper/helpers.jsx'
-import RundomCatFacts from "../API/Animals";
 import { useState } from "react";
 
 export default function Content(props){
@@ -10,11 +9,8 @@ export default function Content(props){
         console.log(helper(value))
     }    
     return <div className="Content">
-      <div className="helperZone">
         <button onClick={()=>{handler(helperText)}}>check helper</button>    
-        <input classNametype="text" onChange={(event)=>{setHelperText(event.target.value)}}/>  
-      </div>
-
-      <RundomCatFacts/>             
+        <input type="text" onChange={(event)=>{setHelperText(event.target.value)}}/>       
+        {props.children}
     </div>
 }
