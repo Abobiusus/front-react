@@ -3,8 +3,10 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import Content from './Content';
 import Footer from './Footer';
+import { Provider } from 'react-redux';
 import {fetchAnimeList} from "./AnimeList/Animelist"
 import {AnimeMass} from './AnimeObjects/AnimeMass';
+import store from './Store';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -34,9 +36,10 @@ function App() {
   ]
   return (
     <div className="App">
+      <Provider store={store}>
       <Header>Header</Header>
       <div className='body_structure'>
-        <Sidebar menu={menu}>Sidebar</Sidebar>
+        <Sidebar>Sidebar</Sidebar>
         <Content>Content
             {isLoading ? (
               <div>Loading...</div>
@@ -46,7 +49,8 @@ function App() {
 
 
       </div>
-      <Footer menu={menu}>Footer</Footer>
+      <Footer>Footer</Footer>
+      </Provider>
     </div>
   );
 }
